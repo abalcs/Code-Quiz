@@ -66,6 +66,7 @@ main {
   color: #333;
 }
 
+
 #begin {
   display: none;
 }
@@ -73,6 +74,7 @@ main {
 #end {
   display: none;
 }
+
 
 .begin, .end {
   display: flex;

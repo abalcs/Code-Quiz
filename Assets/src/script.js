@@ -2,7 +2,7 @@
 let highscores = document.querySelector('#highsores');
 let time = document.querySelector('#time');
 let intro = document.querySelector('#intro');
-let start = document.querySelector('#start');
+let startButton = document.querySelector('#start');
 let begin = document.querySelector('#begin');
 let question = document.querySelector('#question');
 let choices = document.querySelector('#choices');
@@ -11,7 +11,9 @@ let end = document.querySelector('#end');
 let score = document.querySelector('#score');
 let submit = document.querySelector('#submit');
 
-let timeRemaining = [60];
+let timeRemaining = 60;
+let questionCount = 0;
+let correct = [];
 
 // Q & A
 let questions = [
@@ -43,3 +45,28 @@ let questions = [
 ];
 
 
+//Show quiz and hide intro section
+function startQuiz() {
+  document.querySelector("#intro").style.display = "none";
+  document.querySelector("#begin").style.display = "block";
+}
+
+//Start the timer
+function startTimer() {
+  
+}
+
+//Show questions
+
+
+//Validate answer
+
+
+//Move to next question
+
+
+//End the quiz
+
+
+//Event Listeners
+startQuiz();
