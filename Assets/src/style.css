@@ -3,8 +3,105 @@
 ::after {
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Kiwi Maru', sans-serif;
 }
 
 body {
-  ;
+  background: rgb(131,58,180);
+  background: linear-gradient(315deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
 }
+
+nav {
+  display: inline-flex;
+  padding: 10px;
+  width: 100%;
+}
+
+nav p {
+  width: 50%;
+}
+
+.highscores {
+  text-align: left;
+  margin-left: 1em;
+}
+
+.time {
+  text-align: right;
+  margin-right: 1em;
+}
+
+main {
+  height: 900px;
+  font-size: 2rem;
+}
+
+.intro {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4em;
+}
+
+.intro h1, p {
+  text-align: center;
+  width: 100%;
+  padding: 5px 0px;
+}
+
+.intro button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.intro button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+#begin {
+  display: none;
+}
+
+#end {
+  display: none;
+}
+
+.begin, .end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#question, #choices, #answer {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+}
+
+#complete, #score {
+  width: 100%;
+  text-align: center;
+  margin: 15px;
+}
+
+#complete {
+  margin-top: 8em;
+}
+
+#submit {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+#submit:hover {
+  color: #fff;
+  background-color: #333;
+}
+

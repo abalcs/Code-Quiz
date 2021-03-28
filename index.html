@@ -4,11 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/src/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
   <title>Code Quiz</title>
 </head>
 <body>
-  <h1>CODE QUIZ</h1>
+  <header>
+    <nav>
+      <p id="highscores" class="highscores">View High Scores</p>
+      <p id="time" class="time">Time Left: 60</p>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="intro" class="intro">
+      <h1>CODING KNOWLEDGE QUIZ</h1>
+      <p>Put your knowledge to the test and challenge the high scores!</p>
+      <button id="start">Start Quiz!</button>
+    </section>
 
+    <section id="begin">
+      <div class="begin">
+        <div id="question">hello</div>
+        <div id="choices">hola</div>
+        <div id="answer">bonjour</div>
+      </div>
+    </section>
+    
+    <section id="end">
+      <div class="end">
+        <div id="complete">Fin.</div>
+        <div id="score"></div>
+        <button id="submit">Submit</button>
+      </div>
+    </section>
+
+  </main>
 
   <script src="assets/src/script.js"></script>
 </body>
