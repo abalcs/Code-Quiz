@@ -9,6 +9,7 @@
 body {
   background: rgb(131,58,180);
   background: linear-gradient(315deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  background-repeat: no-repeat;
 }
 
 nav {
@@ -57,6 +58,7 @@ main {
   background-color: #333;
   color: #fff;
   font-size: 1.5rem;
+  border-radius: 10px;
 }
 
 .intro button:hover {
@@ -98,6 +100,7 @@ main {
 #submit {
   font-size: 1.5rem;
   padding: 10px;
+  border-radius: 10px;
 }
 
 #submit:hover {
