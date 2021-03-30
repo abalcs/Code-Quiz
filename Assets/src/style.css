@@ -10,6 +10,21 @@ body {
   background: rgb(131,58,180);
   background: linear-gradient(315deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
   background-repeat: no-repeat;
+  animation: change 60s ease-in-out infinite;
+  background-size: 400% 400%;
+  max-height: 100vh;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 
 nav {
@@ -33,7 +48,7 @@ nav p {
 }
 
 main {
-  height: 900px;
+
   font-size: 2rem;
 }
 
@@ -43,7 +58,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 4em;
+  margin-top: 5em;
 }
 
 .intro h1, p {
@@ -81,6 +96,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 15%;
 }
 
 #question, #choices, #answer {

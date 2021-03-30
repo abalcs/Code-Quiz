@@ -28,13 +28,13 @@ let questions = [
     answer: "2"
   },
   {
-    question: "What number question is this?",
-    choices: ["5th", "1st", "2nd", "3rd"],
+    question: "How long does the common octopus live?",
+    choices: ["20-30 years", "5-10 years", "3-5 years", "1-2 years"],
     answer: "4"
   },
   {
     question: "Who is the greatest Quarterback of all time?",
-    choices: ["Tom Brady", "Ryan Leaf", "Bobby Boucher", "Don't know"],
+    choices: ["Tom Brady", "Ryan Leaf", "Bobby Boucher", "What's a quarterback?"],
     answer: "1"
   },
   {
@@ -44,29 +44,3 @@ let questions = [
   }
 ];
 
-
-//Show quiz and hide intro section
-function startQuiz() {
-  document.querySelector("#intro").style.display = "none";
-  document.querySelector("#begin").style.display = "block";
-}
-
-//Start the timer
-function startTimer() {
-  
-}
-
-//Show questions
-
-
-//Validate answer
-
-
-//Move to next question
-
-
-//End the quiz
-
-
-//Event Listeners
-startQuiz();
