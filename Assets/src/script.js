@@ -1,19 +1,16 @@
 // Variables
 let highscores = document.querySelector('#highsores');
-let time = document.querySelector('#time');
+let timer = document.querySelector('#timer');
+
 let intro = document.querySelector('#intro');
 let startButton = document.querySelector('#start');
-let begin = document.querySelector('#begin');
+
 let question = document.querySelector('#question');
 let choices = document.querySelector('#choices');
 let answer = document.querySelector('#answer');
+
 let end = document.querySelector('#end');
 let score = document.querySelector('#score');
-let submit = document.querySelector('#submit');
-
-let timeRemaining = 60;
-let questionCount = 0;
-let correct = [];
 
 // Q & A
 let questions = [
@@ -24,7 +21,7 @@ let questions = [
   },
   {
     question: "Is javascript coming naturally to me?",
-    choices: ["Yes", "No", "Yes", "Yes"],
+    choices: ["No", "No", "No", "No"],
     answer: "2"
   },
   {
@@ -44,3 +41,10 @@ let questions = [
   }
 ];
 
+
+function startGame() {
+ 
+}
+  
+
+startGame();
