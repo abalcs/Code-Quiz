@@ -63,10 +63,10 @@ function startTimer() {
     if(secondsLeft < 1) {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
-      alert("You ran out of time!")
-    }
-  }, 1000);
-}
+      alert("You ran out of time!");
+    } return;
+  }, 100);
+} 
 
 function startGame() {
   document.querySelector("#intro").style.display = "none";

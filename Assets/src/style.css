@@ -98,11 +98,14 @@ main {
   margin-top: 15%;
 }
 
-
+#initials {
+  margin-left: 110px;
+}
 
 #submit {
-  position: absolute;
-  top: 420px;
+  position: relative;
+  top: 90px;
+  right: 130px;
   background-color: #333;
   color: #fff
 }
@@ -134,3 +137,8 @@ main {
   background-color: #333;
 }
 
+@media only screen and (max-width: 500px) {
+  .intro {
+    font-size: 1rem;
+  }
+}
