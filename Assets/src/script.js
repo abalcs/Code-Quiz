@@ -11,6 +11,9 @@ let answer = document.querySelector('#answer');
 
 let end = document.querySelector('#end');
 let score = document.querySelector('#score');
+let initials = document.querySelector('#initials');
+
+let qindex = 0;
 
 // Q & A
 let questions = [
@@ -41,10 +44,75 @@ let questions = [
   }
 ];
 
+let secondsLeft = 60;
+let timerInterval;
+let userScore = 0;
+
+// When start button clicked, game starts
+startButton.addEventListener('click', function() {
+  startTimer()
+  startGame()
+})
+
+function startTimer() {
+  // Sets interval in variable
+    timerInterval = setInterval(function() {
+    secondsLeft--;
+    timer.textContent = "Time Left: " + secondsLeft; 
+  
+    if(secondsLeft < 1) {
+      // Stops execution of action at set interval
+      clearInterval(timerInterval);
+      alert("You ran out of time!")
+    }
+  }, 1000);
+}
 
 function startGame() {
- 
+  document.querySelector("#intro").style.display = "none";
+  document.querySelector("#begin").style.display = "block";
+  getQuestion();
 }
-  
 
-startGame();
+
+function getQuestion() {
+  question.textContent = questions[qindex].question
+  for (let i = 0; i < questions[qindex].choices.length; i++) {
+    const button = document.createElement("button");
+    button.textContent = questions[qindex].choices[i];
+    button.id = (i + 1).toString()
+    button.addEventListener('click', checkAnswer);
+    question.append(button);
+  }
+}
+
+function checkAnswer(event) {
+  const usersAnswer = event.target.id
+  if (usersAnswer === questions[qindex].answer) {
+    answer.textContent = "Correct!"
+    userScore += 10;
+  } else {
+    answer.textContent = "Answer is Wrong"
+    secondsLeft -= 10;
+  }
+  qindex++;
+  if (qindex < questions.length) {
+    getQuestion()
+  } else { 
+    endGame()
+  } 
+}
+
+function endGame() {
+  clearInterval(timerInterval);
+  document.querySelector("#begin").style.display = "none";
+  document.querySelector("#end").style.display = "block";
+  //display the score
+  userScore.appendChild(score);
+}
+  //create event handler for the submit button and point it at the save score function.  See event handlier for button
+
+  function saveScore() {
+
+}
+
