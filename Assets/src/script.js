@@ -14,6 +14,9 @@ let score = document.querySelector('#score');
 let initials = document.querySelector('#initials');
 
 let qindex = 0;
+let secondsLeft = 60;
+let timerInterval;
+let userScore = 0;
 
 // Q & A
 let questions = [
@@ -44,10 +47,6 @@ let questions = [
   }
 ];
 
-let secondsLeft = 60;
-let timerInterval;
-let userScore = 0;
-
 // When start button clicked, game starts
 startButton.addEventListener('click', function() {
   startTimer()
@@ -63,9 +62,10 @@ function startTimer() {
     if(secondsLeft < 1) {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
+      endGame();
       alert("You ran out of time!");
-    } return;
-  }, 100);
+    }
+  }, 1000);
 } 
 
 function startGame() {
@@ -92,7 +92,7 @@ function checkAnswer(event) {
     answer.textContent = "Correct!"
     userScore += 10;
   } else {
-    answer.textContent = "Answer is Wrong"
+    answer.textContent = "Answer is Incorrect"
     secondsLeft -= 10;
   }
   qindex++;
@@ -110,9 +110,18 @@ function endGame() {
   //display the score
   score.append(userScore);
 }
+
+
   //create event handler for the submit button and point it at the save score function.  See event handlier for button
 
-  function saveScore() {
-    
+
+submit.addEventListener('click', function() {
+  saveScore();
+})
+
+
+function saveScore() {
+  hs.append(userScore)
 }
+saveScore()
 
