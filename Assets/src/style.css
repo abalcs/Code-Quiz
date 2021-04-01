@@ -90,7 +90,6 @@ main {
   display: none;
 }
 
-
 .begin, .end {
   display: flex;
   justify-content: center;
@@ -99,10 +98,19 @@ main {
   margin-top: 15%;
 }
 
+
+
+#submit {
+  position: absolute;
+  top: 420px;
+  background-color: #333;
+  color: #fff
+}
+
 #question, #choices, #answer {
   width: 100%;
   text-align: center;
-  margin: 15px 0;
+  margin: 15px 15px;
 }
 
 #complete, #score {

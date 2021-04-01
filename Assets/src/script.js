@@ -23,18 +23,18 @@ let questions = [
     answer: "3"
   },
   {
-    question: "Is javascript coming naturally to me?",
-    choices: ["No", "No", "No", "No"],
+    question: "What does DOM stand for?",
+    choices: ["Document Objective Model", "Document Object Model", "Document of Null", "Data Obselete Negative"],
     answer: "2"
   },
   {
-    question: "How long does the common octopus live?",
-    choices: ["20-30 years", "5-10 years", "3-5 years", "1-2 years"],
+    question: "Which would you use to store items in an array?",
+    choices: ["/*", "{}", "<>", "[]"],
     answer: "4"
   },
   {
-    question: "Who is the greatest Quarterback of all time?",
-    choices: ["Tom Brady", "Ryan Leaf", "Bobby Boucher", "What's a quarterback?"],
+    question: "Which would you use to store objects?",
+    choices: ["{}", "[]", "()", "<>"],
     answer: "1"
   },
   {
@@ -108,11 +108,11 @@ function endGame() {
   document.querySelector("#begin").style.display = "none";
   document.querySelector("#end").style.display = "block";
   //display the score
-  userScore.appendChild(score);
+  score.append(userScore);
 }
   //create event handler for the submit button and point it at the save score function.  See event handlier for button
 
   function saveScore() {
-
+    
 }
 
