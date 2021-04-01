@@ -1,5 +1,5 @@
 // Variables
-let highscores = document.querySelector('#highsores');
+let highscores = document.querySelector('#highscores');
 let timer = document.querySelector('#timer');
 
 let intro = document.querySelector('#intro');
@@ -115,13 +115,14 @@ function endGame() {
   //create event handler for the submit button and point it at the save score function.  See event handlier for button
 
 
-submit.addEventListener('click', function() {
+submit.addEventListener('click', function(event) {
+  event.target.disabled = true;
   saveScore();
 })
 
 
 function saveScore() {
-  hs.append(userScore)
+  highscores.append(userScore)
 }
 saveScore()
 
