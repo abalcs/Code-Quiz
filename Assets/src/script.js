@@ -111,19 +111,14 @@ function endGame() {
   score.append(userScore);
 }
 
-
-  //create event handler for the submit button and point it at the save score function.  See event handlier for button
-
-  //
-
 submit.addEventListener('click', function(event) {
   event.target.disabled = true;
   saveScore();
 })
 
-
 function saveScore() {
-  highscores.append(userScore)
+  highscores.append(initials);
+  highscores.append(userScore);
 }
-saveScore()
+
 
