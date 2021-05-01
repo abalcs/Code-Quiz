@@ -6,6 +6,9 @@
 
 Link to live website: (https://https://abalcs.github.io/Code-Quiz/)
 
+## Tech Used
+HTML, CSS, JavaScript
+
 ## Instructions
 To create a quiz that presents questions to the user, validates the correct answers, tally's their score, saves their initials input with their score to a list of high scores, and sets a 60 second timer to complete.
 
