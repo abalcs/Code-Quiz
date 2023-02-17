@@ -18,6 +18,9 @@ let secondsLeft = 60;
 let timerInterval;
 let userScore = 0;
 
+let list = localStorage.getItem('val')
+highscores.append(list)
+
 // Q & A
 let questions = [
   {
@@ -83,7 +86,7 @@ function getQuestion() {
 
     button.style.background = '#0275d8'
     button.style.color = 'white'
-    button.style.minWidth = '400px'
+    button.style.width = '200px'
     button.style.textAlign = 'center'
     button.style.margin = '10px'
     button.style.padding = '10px'
@@ -123,7 +126,9 @@ function endGame() {
   document.querySelector("#begin").style.display = "none";
   document.querySelector("#end").style.display = "block";
   //display the score
+  userScore += secondsLeft
   score.append(userScore);
+
 }
 
 submit.addEventListener('click', function(event) {
@@ -134,8 +139,9 @@ submit.addEventListener('click', function(event) {
 function saveScore() {
   let val = document.querySelector('input').value
 
-  highscores.append(val);
-  highscores.append(`  ` + userScore);
+  localStorage.setItem('val', val + ` ` + ` ` + userScore)
+
+  location.reload()
 }
 
 
