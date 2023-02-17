@@ -40,6 +40,7 @@ nav p {
 .highscores {
   text-align: left;
   margin-left: 1em;
+  font-size: 1.25rem;
 }
 
 .timer {
@@ -103,6 +104,7 @@ section {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 15%;
+  min-width: 100%;
 }
 
 #initials {
@@ -121,6 +123,7 @@ section {
   width: 100%;
   text-align: center;
   margin: 15px 15px;
+  text-transform: uppercase;
 }
 
 #complete, #score {
@@ -149,3 +152,23 @@ section {
     font-size: 1rem;
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+

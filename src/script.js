@@ -22,7 +22,7 @@ let userScore = 0;
 let questions = [
   {
     question: "What does JS stand for?",
-    choices: ["Juicy Steak", "January Swimming", "Javascript", "Jalapeno Strips"],
+    choices: ['Juicy Steak', "January Swimming", "Javascript", "Jalapeno Strips"],
     answer: "3"
   },
   {
@@ -58,8 +58,8 @@ function startTimer() {
     timerInterval = setInterval(function() {
     secondsLeft--;
     timer.textContent = "Time Left: " + secondsLeft; 
-  
-    if(secondsLeft < 1) {
+
+   if(secondsLeft < 1) {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
       endGame();
@@ -77,10 +77,25 @@ function startGame() {
 
 function getQuestion() {
   question.textContent = questions[qindex].question
+
   for (let i = 0; i < questions[qindex].choices.length; i++) {
     const button = document.createElement("button");
+
+    button.style.background = '#0275d8'
+    button.style.color = 'white'
+    button.style.minWidth = '400px'
+    button.style.textAlign = 'center'
+    button.style.margin = '10px'
+    button.style.padding = '10px'
+    button.style.animation = 'fadeIn 2s'
+    button.style.boxShadow = '0px 5px 15px lightgrey'
+
+    button.classList.add('wrap')
+    button.classList.add('rounded')
+
     button.textContent = questions[qindex].choices[i];
     button.id = (i + 1).toString()
+
     button.addEventListener('click', checkAnswer);
     question.append(button);
   }
@@ -117,8 +132,10 @@ submit.addEventListener('click', function(event) {
 })
 
 function saveScore() {
-  highscores.append(initials);
-  highscores.append(userScore);
+  let val = document.querySelector('input').value
+
+  highscores.append(val);
+  highscores.append(`  ` + userScore);
 }
 
 

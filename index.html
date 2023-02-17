@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="src/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
   <title>Code Quiz</title>
 </head>
 <body>
   <header>
-    <nav>
-      <p id="highscores" class="highscores">View High Scores</p>
-      <p id="timer" class="timer">Time Left: 60</p>
+    <nav class="d-flex justify-content-between">
+      <div class="highscores">
+        <div class=''>View High Scores</div>
+          <div id="highscores" class="text-center text-light"></div>
+      </div>
+      <div id="timer" class="timer">Time Left: 60</div>
     </nav>
   </header>
   
@@ -24,7 +28,7 @@
 
     <section id="begin">
       <div class="begin">
-        <div id="question"></div>
+        <div class='card card-body d-flex align-items-center bg-dark text-light fs-4 p-5 m-1' id="question"></div>
         <div id="choices"></div>
         <div id="answer"></div>
       </div>
@@ -34,7 +38,7 @@
       <div class="end">
         <div>Fin.</div>
         <div id="score">Your Score: </div>
-        <input type="text" placeholder="Enter Initials" id="initials"></input>
+        <input type="text" placeholder="Enter Initials" id="initials" class="bg-dark text-light"></input>
         <button id="submit">Submit</button>
       </div>
     </section>
