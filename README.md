@@ -4,7 +4,7 @@
 ![Code Quiz Image2](src/img/quiz2.png)
 ![Code Quiz Image3](src/img/quiz3.png)
 
-Link to live website: (https://https://abalcs.github.io/Code-Quiz/)
+Link to live website: (https://abalcs.github.io/Code-Quiz/)
 
 ## Tech Used
 HTML, CSS, JavaScript
