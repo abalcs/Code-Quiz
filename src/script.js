@@ -13,30 +13,36 @@ let end = document.querySelector('#end');
 let score = document.querySelector('#score');
 let initials = document.querySelector('#initials');
 
+let reset = document.querySelector('#reset')
+
 let qindex = 0;
 let secondsLeft = 60;
 let timerInterval;
 let userScore = 0;
 
 let list = JSON.parse(localStorage.getItem('val'))
-list = list.sort((a, b) => {
-  return b.score - a.score
-})
 
 if(list === null) {
   highscores.append('')
   } else {
+    list = list.sort((a, b) => {
+      return b.score - a.score
+    })
 
     for(let i = 0; i < list.length; i++) {
       let item = document.createElement('li')
-      item.style.listStyle = 'none'
+      item.style.margin = 'auto'
 
       item.textContent = list[i].initials + ` ` + list[i].score
 
       highscores.append(item)
     }
-
 }
+
+reset.addEventListener('click', function() {
+  localStorage.clear()
+  highscores.textContent = ''
+})
 
 // Q & A
 let questions = [
@@ -86,7 +92,7 @@ function startTimer() {
       alert("You ran out of time!");
       location.reload()
     }
-  }, 100);
+  }, 1000);
 } 
 
 function startGame() {

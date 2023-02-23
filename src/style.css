@@ -4,13 +4,14 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Kiwi Maru', sans-serif;
+  color: white;
 }
 
 body {
   background: rgb(131,58,180);
   background: linear-gradient(315deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
   background-repeat: no-repeat;
-  animation: change 30s ease-in-out infinite;
+  animation: change 10s ease-in-out infinite;
   background-size: 400% 400%;
   max-height: 100vh;
 }
@@ -29,7 +30,6 @@ body {
 
 nav {
   display: inline-flex;
-  padding: 10px;
   width: 100%;
 }
 
@@ -38,9 +38,12 @@ nav p {
 }
 
 .highscores {
-  text-align: left;
   margin-left: 1em;
   font-size: 1.25rem;
+}
+
+ul {
+  padding: 0;
 }
 
 .timer {
@@ -49,7 +52,6 @@ nav p {
 }
 
 main {
-
   font-size: 2rem;
 }
 
