@@ -18,8 +18,25 @@ let secondsLeft = 60;
 let timerInterval;
 let userScore = 0;
 
-let list = localStorage.getItem('val')
-highscores.append(list)
+let list = JSON.parse(localStorage.getItem('val'))
+list = list.sort((a, b) => {
+  return b.score - a.score
+})
+
+if(list === null) {
+  highscores.append('')
+  } else {
+
+    for(let i = 0; i < list.length; i++) {
+      let item = document.createElement('li')
+      item.style.listStyle = 'none'
+
+      item.textContent = list[i].initials + ` ` + list[i].score
+
+      highscores.append(item)
+    }
+
+}
 
 // Q & A
 let questions = [
@@ -67,8 +84,9 @@ function startTimer() {
       clearInterval(timerInterval);
       endGame();
       alert("You ran out of time!");
+      location.reload()
     }
-  }, 1000);
+  }, 100);
 } 
 
 function startGame() {
@@ -139,7 +157,15 @@ submit.addEventListener('click', function(event) {
 function saveScore() {
   let val = document.querySelector('input').value
 
-  localStorage.setItem('val', val + ` ` + ` ` + userScore)
+  let scores = JSON.parse(localStorage.getItem('val')) || [];
+
+  let newScore = {
+    score: userScore,
+    initials: val
+  }
+
+  scores.push(newScore)
+  localStorage.setItem('val', JSON.stringify((scores)))
 
   location.reload()
 }
