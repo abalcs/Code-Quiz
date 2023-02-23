@@ -24,6 +24,7 @@ let list = JSON.parse(localStorage.getItem('val'))
 
 if(list === null) {
   highscores.append('')
+  reset.style.display = 'none'
   } else {
     list = list.sort((a, b) => {
       return b.score - a.score
@@ -41,6 +42,7 @@ if(list === null) {
 
 reset.addEventListener('click', function() {
   localStorage.clear()
+  reset.style.display = 'none'
   highscores.textContent = ''
 })
 
